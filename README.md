@@ -16,7 +16,6 @@ This project was part of an online test of oxytocin company to shortlist student
 - Move highlights from one bucket to another.
 # Folder Structure
 ```
-├───.idea
 ├───css
 ├───images
 └───js
