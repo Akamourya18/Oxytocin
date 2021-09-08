@@ -5,12 +5,13 @@
 function addCardIml(list) {
   return function () {
     var titleTextarea = list.titleFormNode.getElementsByClassName(
-      'iml-new-card-title-input'
+      "iml-new-card-title-input"
     )[0];
+
     list.titleFormNode.getElementsByClassName(
-      'iml-new-card-title-submit'
+      "iml-new-card-title-submit"
     )[0].onclick = titleSubmit;
-    list.titleFormNode.style.display = 'block';
+    list.titleFormNode.style.display = "block";
     titleTextarea.focus();
 
     function titleSubmit(evt) {
@@ -18,8 +19,8 @@ function addCardIml(list) {
       var title = titleTextarea.value.trim(),
         card;
 
-      list.titleFormNode.style.display = 'none';
-      titleTextarea.value = '';
+      list.titleFormNode.style.display = "none";
+      titleTextarea.value = " ";
       if (!title) {
         return;
       }
@@ -30,6 +31,7 @@ function addCardIml(list) {
         card.node,
         list.cards[list.cards.length - 1].node
       );
+
       list.cards.push(card);
     }
   };

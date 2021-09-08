@@ -1,21 +1,3 @@
-html {
-  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 500% 500%;
-  animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
 body,
 button,
 html,
@@ -23,9 +5,21 @@ input,
 select,
 textarea {
   color: #4d4d4d;
-  font: 14px 'Helvetica Neue', Helvetica, sans-serif;
+  font: 14px "Helvetica Neue", Helvetica, sans-serif;
   line-height: 20px;
   transition: all 0.3s ease-in-out;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background: black;
+}
+
+#particles-js {
+  height: 100vh;
+  z-index: 20;
 }
 
 .newitem-title-wrapper {
@@ -129,6 +123,7 @@ textarea {
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 1px solid #dddddd;
+  border-radius: 7px;
 }
 
 .iml-new-card-title-input:focus {
@@ -183,8 +178,9 @@ textarea {
   left: 50%;
   margin: 0px 0 0 -300px;
   padding: 50px;
-  border-radius: 3px;
-  background-color: #ccc;
+  border-radius: 7px;
+  background-color: rgb(211, 211, 211);
+  transition: display 0.5s;
 }
 
 #card-edit div {
@@ -199,6 +195,20 @@ textarea {
 
 #card-edit-inputs input {
   width: 300px;
+  overflow: hidden;
+  word-wrap: break-word;
+  border-radius: 5px;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid #dddddd;
+  outline: none;
+}
+
+#card-edit-inputs:focus {
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 1px solid rgba(81, 203, 238, 1);
 }
 
 #card-edit-close {
@@ -221,16 +231,15 @@ textarea {
 }
 
 .navigation-bar {
-  background: rgba(0, 0, 0, 0.603);
+  /* background: rgba(0, 0, 0, 0.603); */
   border-radius: 5px;
   color: white;
-  font-family: 'Roboto';
+  font-family: "Roboto";
   line-height: 60px;
   padding: 10px;
   font-size: 50px;
   text-align: center;
   overflow: hidden;
-
   z-index: 10;
 }
 
@@ -240,17 +249,42 @@ textarea {
 }
 
 #card-edit-delete {
-  float: left;
-  width: 70px;
-  background-color: #7b1401;
-  color: #fff;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  padding: 7px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+  background-color: #c42306;
+  color: #ecf0f1;
+  top: 18px;
+  transition: background-color 0.3s;
+}
+
+#card-edit-delete:hover,
+#card-edit-delete:focus {
+  background-color: #a01c05;
 }
 
 #card-edit-submit {
   float: right;
-  width: 70px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  padding: 7px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
   background-color: #5aa3f2;
   color: #fff;
+}
+
+#card-edit-submit:hover,
+#card-edit-submit:focus {
+  background-color: #276dae;
 }
 
 #iml-title-board {

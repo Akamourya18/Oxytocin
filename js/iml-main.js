@@ -1,5 +1,5 @@
 (function () {
-  'use strict';
+  "use strict";
 
   //Board constructor object and assign some properties to its prototype
   function Board(title) {
@@ -9,25 +9,25 @@
     this.lists = [];
     this.cards = {};
 
-    this.node = document.createElement('div');
-    this.titleNode = document.createElement('div');
-    this.listsNode = document.createElement('div');
+    this.node = document.createElement("div");
+    this.titleNode = document.createElement("div");
+    this.listsNode = document.createElement("div");
 
-    this.node.id = 'board';
-    this.titleNode.id = 'iml-title-board';
-    this.listsNode.id = 'iml-canvas-board';
+    this.node.id = "board";
+    this.titleNode.id = "iml-title-board";
+    this.listsNode.id = "iml-canvas-board";
 
     // new list title form
     this.titleFormNode = buildListTitleForm();
     this.titleNode.appendChild(document.createTextNode(this.title));
 
     this.getNextId = function () {
-      return '_' + (nextId++).toString();
+      return "_" + (nextId++).toString();
     };
   }
 
   Board.prototype.render = function () {
-    this.lists.push(new List(this, 'Add a Bucket...', 0, true));
+    this.lists.push(new List(this, "Add a Bucket...", 0, true));
     for (var i = 0; i < this.lists.length; ++i) {
       this.listsNode.appendChild(this.lists[i].node);
     }
@@ -35,6 +35,7 @@
     this.lists[this.lists.length - 1].titleNode.onclick = addListIml(this);
     this.node.appendChild(this.titleNode);
     this.node.appendChild(this.listsNode);
+    console.log(this.lists);
   };
 
   Board.prototype.registerCard = function (card, index) {
@@ -55,11 +56,11 @@
     delete this.cards[card.id];
   };
 
-  document.getElementById('card-edit-close').onclick = cardEdit.close;
+  document.getElementById("card-edit-close").onclick = cardEdit.close;
 
-  document.getElementById('card-edit-submit').onclick = cardEdit.submit;
+  document.getElementById("card-edit-submit").onclick = cardEdit.submit;
 
-  document.getElementById('card-edit-delete').onclick = cardDeleteIml.delete;
+  document.getElementById("card-edit-delete").onclick = cardDeleteIml.delete;
 
   cardEdit.windowOverlay.onclick = cardEdit.close;
 
@@ -72,11 +73,11 @@
 
   //Onloading the document render the board.The code starts from here
   document.body.onload = function () {
-    var title = '',
+    var title = "",
       board = new Board(title);
 
     board.render();
-    document.getElementById('container').appendChild(board.node);
+    document.getElementById("container").appendChild(board.node);
     currentBoard = board;
   };
 })();

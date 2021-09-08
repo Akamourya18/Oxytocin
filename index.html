@@ -3,33 +3,36 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" type="text/css" href="css/iml.css" />
-    <title>IDEA MANAGEMENT TOOL</title>
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
     />
+
+    <title>IDEA MANAGEMENT TOOL</title>
   </head>
 
   <body>
-    <div class="navigation-bar">IDEA MANAGEMENT TOOL</div>
-    <div id="container"></div>
+    <div id="particles-js">
+      <div class="navigation-bar">IDEA MANAGEMENT TOOL</div>
+      <div id="container"></div>
 
-    <div id="container-main"></div>
+      <div id="container-main"></div>
 
-    <div id="card-edit">
-      <div id="card-edit-close"><img src="images/cross.png" /></div>
-      <form>
-        <div id="card-edit-inputs">
-          <div>
-            <label>Highlight:</label>
-            <input id="card-edit-title" />
+      <div id="card-edit">
+        <div id="card-edit-close"><img src="images/cross.png" /></div>
+        <form>
+          <div id="card-edit-inputs">
+            <div>
+              <label>Highlight:</label>
+              <input id="card-edit-title" />
+            </div>
           </div>
-        </div>
-        <div>
-          <input id="card-edit-delete" type="button" value="Delete" />
-          <input id="card-edit-submit" type="submit" value="Save" />
-        </div>
-      </form>
+          <div>
+            <input id="card-edit-delete" type="button" value="Delete" />
+            <input id="card-edit-submit" type="submit" value="Save" />
+          </div>
+        </form>
+      </div>
     </div>
 
     <script type="text/javascript" src="js/card-delete.js"></script>
@@ -41,5 +44,7 @@
     <script type="text/javascript" src="js/list.js"></script>
     <script type="text/javascript" src="js/add-list.js"></script>
     <script type="text/javascript" src="js/iml-main.js"></script>
+    <script src="css/particles.js-master/particles.js"></script>
+    <script src="css/particles.js-master/demo/js/app.js"></script>
   </body>
 </html>
