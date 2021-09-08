@@ -22,5 +22,3 @@ This project was part of an online test of oxytocin company to shortlist student
 ```
 # Live link of website
  <a href="https://akamourya18.github.io/Oxytocin/" target="_blank"> Click Here</a>
-# Link to demo video of the project
-<a href="https://drive.google.com/drive/folders/1imgjTAKgnHfMpPhUWZfUhuJ3eyTJxy4d?usp=sharing" target="_blank"> Click Here</a>
